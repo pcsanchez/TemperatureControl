@@ -22,9 +22,9 @@ function App() {
   const [systemInput, setSystemInput] = useState(1);
   const [iterations, setIterations] = useState(100);
   const [controller, setController] = useState("PID");
-  const [kp, setKp] = useState(0);
-  const [ki, setKi] = useState(0);
-  const [kd, setKd] = useState(0);
+  const [kp, setKp] = useState(10);
+  const [ki, setKi] = useState(0.1);
+  const [kd, setKd] = useState(0.1);
   const [tau, setTau] = useState(30);
 
   const [reference, setReference] = useState([]);
@@ -83,14 +83,16 @@ function App() {
             <h3>Ki</h3>
             <input
               id="ki-label"
-              type="text"
+              type="number"
+              step="0.001"
               value={ki}
               onChange={(e) => setKi(e.target.value)}
             />
             <h3>Kd</h3>
             <input
               id="kd-label"
-              type="text"
+              type="number"
+              step="0.001"
               value={kd}
               onChange={(e) => setKd(e.target.value)}
             />
@@ -113,7 +115,7 @@ function App() {
               <h3>Tau</h3>
               <input
                 id="tau-label"
-                type="text"
+                type="number"
                 value={tau}
                 onChange={(e) => setTau(e.target.value)}
               />
@@ -135,13 +137,13 @@ function App() {
           </div>
           <h2>Select System Input</h2>
           <input
-            type="text"
+            type="number"
             value={systemInput}
             onChange={(e) => setSystemInput(Number(e.target.value))}
           />
           <h2>Number of Iterations</h2>
           <input
-            type="text"
+            type="number"
             value={iterations}
             onChange={(e) => setIterations(Number(e.target.value))}
           />
