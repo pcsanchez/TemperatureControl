@@ -139,13 +139,13 @@ function App() {
           <input
             type="number"
             value={systemInput}
-            onChange={(e) => setSystemInput(Number(e.target.value))}
+            onChange={(e) => setSystemInput(e.target.value)}
           />
           <h2>Number of Iterations</h2>
           <input
             type="number"
             value={iterations}
-            onChange={(e) => setIterations(Number(e.target.value))}
+            onChange={(e) => setIterations(e.target.value)}
           />
           <h2>Select Your Controller</h2>
           <div id="controller-options">
@@ -187,7 +187,7 @@ function App() {
                   <Line
                     type="monotone"
                     dataKey="value"
-                    stroke="#8884d8"
+                    stroke="#0000FF"
                     dot={false}
                   />
                 </LineChart>
