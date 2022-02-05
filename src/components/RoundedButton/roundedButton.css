@@ -1,0 +1,14 @@
+#rounded-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #112A3E;
+    color: white;
+    width: 30%;
+    height: 90%;
+    border-radius: 100px;
+}
+
+#rounded-button:hover {
+    cursor: pointer;
+}

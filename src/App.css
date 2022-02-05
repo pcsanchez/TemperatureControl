@@ -1,38 +1,81 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.latex-equation-main {
+  font-size: 1.8vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.latex-equation {
+  font-size: 1.3vw;
+  padding-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#main-content {
+  display: flex;
+  height: 90%;
+  width: 100%;
+  background-color: #fff;
+}
+
+#user-interface {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0px 20px;
+  height: 100%;
+  width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+#controller {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#controller-options {
+  display: flex;
+  justify-content: space-around;
+  height: 10%;
+  width: 100%;
+}
+
+#controller-params {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+#controller-params-container {
+  border: 1px solid #000;
+  border-radius: 50px;
+  height: 100%;
+}
+
+#graphical-interface {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  height: 100%;
+}
+
+.graph-row {
+  display: flex;
+  height: 45%;
+  width: 100%;
+}
+
+.graph-container {
+  height: 100%;
+  width: 50%;
+}
+
+#sim-button-container {
+  display: flex;
+  justify-content: space-around;
+  height: 10%;
+  width: 100%;
 }
